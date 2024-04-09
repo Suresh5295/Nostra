@@ -51,3 +51,26 @@ var mostwantedbutton=document.getElementById("mostwantedbutton")
 mostwantedbutton.addEventListener("click",function(){
     document.getElementById('mostwantedcontainer').scrollIntoView({ behavior: 'smooth', block:"start" });
 })
+
+
+
+// document.getElementById('mostwantedcontainer').addEventListener('wheel', function(e) {
+//     const container = document.getElementById('items-container');
+//     container.scrollLeft += e.deltaY;
+//     e.preventDefault();
+// });
+
+// Get the container and attach the wheel event listener to it
+const container = document.getElementById('mostwantedcontainer');
+
+container.addEventListener('wheel', function(e) {
+    // Prevent the default scroll behavior
+    e.preventDefault();
+
+    // Get the items-container
+    const itemsContainer = document.getElementById('items-container');
+
+    // Scroll horizontally based on the wheel delta
+    itemsContainer.scrollLeft += e.deltaY;
+});
+
