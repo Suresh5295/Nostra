@@ -12,24 +12,39 @@
 </head>
 
 <body>
+    <!-- offer bar -->
+    <div id="offer" class="text-center">
+        <div class="bg-black text-white ">
+            <p>Sign Up and <b>GET 20% OFF</b> for your first Order
+            <i id="offerclose" style="margin-left: 10%; cursor: pointer;" class="font-bold"> X</i>
+            </p>
+        </div> 
+    </div>
     <!-- navbar -->
-    <div class="p-5 flex justify-between items-center ">
+    <div class="p-5 flex justify-between items-center sticky top-0 z-20 bg-white">
         <h1 class="text-3xl font-extrabold ">Nostra</h1>
         <div class="flex gap-20 mr-20 font-semibold text-xl  cursor-pointer">
             <p class="hover:underline">Home</p>
-            <p class="hover:underline" >New Arrival</p>
-            <p class="hover:underline">Most Wanted</p>
+            <p class="hover:underline" id="newarrivalbutton" >New Arrival</p>
+            <p class="hover:underline" id="mostwantedbutton">Most Wanted</p>
             <p class="hover:underline">Collections</p>
             <p class="hover:underline">Contact us</p>
         </div>
     </div>
     <!-- Image section -->
 <div class="p-5 flex justify-center relative">
+    <div class="slider">
     <img src="./img/img1.jpg" alt="img" style="height:800px;width:100%;opacity: 0.5;">
+    <img src="./img/sli-2.jpg" alt="" style="height:800px;width:100%;opacity: 0.5;display: none;" >
+    <img src="./img/s-3.jpg" alt="" style="height:800px;width:100%;opacity: 0.5;display: none;" >
+    <img src="./img/s-4.jpg" alt="" style="height:800px;width:100%;opacity: 0.5;display: none;" >
+    <img src="./img/pexels-mart-production-7679863.jpg" alt="" style="height:800px;width:100%;opacity: 0.5;display: none;">
+</div>
     <div class="flex justify-center absolute inset-0">
+    
         <div class="flex items-center">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="w-36 h-24 cursor-pointer">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="w-36 h-24 cursor-pointer ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" onclick="prevSlide()"/>
             </svg>
             <div class="text-center ">
                 <h1 class="font-extrabold text-4xl mb-3">Level up your Style with our</h1>
@@ -37,7 +52,7 @@
                 <button class="border border-black text-black p-3">Shop Now -></button>
             </div>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3.5" stroke="currentColor" class="w-36 h-24 cursor-pointer">
-                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" onclick="nextSlide()" />
             </svg>
         </div>
     </div>
@@ -45,7 +60,7 @@
 
 
     <!-- Brand section -->
-    <div class="p-5 ">
+    <div class="p-5 mt-5">
         <h1 class="font-extrabold text-4xl">Brands</h1>
         <div class="mt-6 flex justify-between text-center ">
             <div>
@@ -134,10 +149,10 @@
 
    <!-- New Arrivals Section -->
 
-<div class="flex justify-center">
-    <div style="position: relative">
-        <h1 class="font-extrabold text-4xl">New Arrivals</h1>
-        <div class="flex gap-8 p-5">
+<div class="flex justify-center" id="newarrivalcontainer">
+    <div style="position: relative; margin-top:30px;">
+        <h1  class="font-extrabold text-4xl">New Arrivals</h1>
+        <div   class="flex gap-8 p-5">
             <div style="background-color: white; border-radius: 5px; position: relative;">
                 <img src="./img/f1.jpg" alt="" style="width: 300px; height: 300px; opacity: 0.6; z-index: 2;">
                 <button style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); border-radius: 10px; background-color: whitesmoke;" class="border border-solid border-black p-2">ShopNow &#x2192;</button>
@@ -160,7 +175,7 @@
 
 
    <!-- Most Wanted -->
-   <div class="flex justify-center">
+   <div class="flex justify-center" id="mostwantedcontainer">
 <div  >
     <h1 class="font-extrabold text-4xl" >Most Wanted</h1>
     <div class="flex gap-8 p-5 " >
@@ -242,6 +257,8 @@
     <p>@ 2023 Greenden.com</p>
   </div>
   </section>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
