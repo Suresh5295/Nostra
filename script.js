@@ -44,10 +44,10 @@ showSlide(currentSlide);
 // });
 var newarrivalbutton =document.getElementById("newarrivalbutton")
 newarrivalbutton.addEventListener("click",function(){
-    document.getElementById('newarrivalcontainer').scrollIntoView({ behavior: 'smooth', block:"center" });
+    document.getElementById('newarrivalcontainer').scrollIntoView({ behavior: 'smooth', block:"start" });
 })
 
 var mostwantedbutton=document.getElementById("mostwantedbutton")
 mostwantedbutton.addEventListener("click",function(){
-    document.getElementById('mostwantedcontainer').scrollIntoView({ behavior: 'smooth', block:"center" });
+    document.getElementById('mostwantedcontainer').scrollIntoView({ behavior: 'smooth', block:"start" });
 })
