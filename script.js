@@ -1,8 +1,11 @@
+// offer label close script
 var offer =document.getElementById("offer")
 var offerclose =document.getElementById("offerclose")
 offerclose.addEventListener("click",function(){
     offer.style.display="none"
 })
+
+// image slider script
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slider img');
@@ -35,42 +38,28 @@ function prevSlide() {
 
 showSlide(currentSlide);
 
-/////
-  // JavaScript code to scroll up and stop at the "New Arrivals" section when the button is clicked
-//   document.getElementById('newArrivalButton').addEventListener('click', function() {
-//     let newArrivalSection = document.getElementById('newarrivalcontainer');
-//     let yOffset = newArrivalSection.getBoundingClientRect().top + window.pageYOffset;
-//     window.scrollTo({ top: yOffset, behavior: 'smooth' });
-// });
+// new arrival behavior script//
 var newarrivalbutton =document.getElementById("newarrivalbutton")
 newarrivalbutton.addEventListener("click",function(){
     document.getElementById('newarrivalcontainer').scrollIntoView({ behavior: 'smooth', block:"start" });
 })
-
+// most wanted behavior script//
 var mostwantedbutton=document.getElementById("mostwantedbutton")
 mostwantedbutton.addEventListener("click",function(){
     document.getElementById('mostwantedcontainer').scrollIntoView({ behavior: 'smooth', block:"start" });
 })
 
-
-
-// document.getElementById('mostwantedcontainer').addEventListener('wheel', function(e) {
-//     const container = document.getElementById('items-container');
-//     container.scrollLeft += e.deltaY;
-//     e.preventDefault();
-// });
-
-// Get the container and attach the wheel event listener to it
+// most wanted scroll lock script//
 const container = document.getElementById('mostwantedcontainer');
 
 container.addEventListener('wheel', function(e) {
-    // Prevent the default scroll behavior
+   
     e.preventDefault();
 
-    // Get the items-container
+   
     const itemsContainer = document.getElementById('items-container');
 
-    // Scroll horizontally based on the wheel delta
+    
     itemsContainer.scrollLeft += e.deltaY;
 });
 

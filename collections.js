@@ -1,15 +1,4 @@
-// function filterImages() {
-//     const checkboxes = document.querySelectorAll('input[name="occasion"]');
-//     const checkedOccasions = Array.from(checkboxes).filter(checkbox => checkbox.checked).map(checkbox => checkbox.id);
-//     const clothingGrid = document.getElementById('clothingGrid');
-//     const clothingItems = clothingGrid.querySelectorAll('div');
-    
-//     clothingItems.forEach(item => {
-//       const itemName = item.querySelector('h2').textContent.toLowerCase();
-//       const isVisible = checkedOccasions.some(occasion => itemName.includes(occasion));
-//       item.style.display = isVisible ? 'block' : 'none';
-//     });
-//   }
+// collection checkbox filter js code
 
 
 function filterImages() {
