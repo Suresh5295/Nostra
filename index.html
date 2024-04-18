@@ -14,7 +14,7 @@
 <body>
     <!-- offer bar -->
     <div id="offer" class="text-center">
-        <div class="bg-black text-white ">
+        <div class="bg-black text-white sm:text-center sm:text-xs">
             <p>Sign Up and <b>GET 20% OFF</b> for your first Order
             <i id="offerclose" style="margin-left: 10%; cursor: pointer;" class="font-bold"> X</i>
             </p>
@@ -23,13 +23,30 @@
     <!-- navbar -->
     <div class="p-5 flex justify-between items-center sticky top-0 z-20 bg-white">
         <h1 class="text-3xl font-extrabold ">Nostra</h1>
-        <div class="flex gap-20 mr-20 font-semibold text-xl  cursor-pointer">
+        <svg id="menuicon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 lg:hidden">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        <div class="flex gap-20 mr-20 font-semibold text-xl  cursor-pointer sm:hidden lg:flex  ">
             <p class="hover:underline">Home</p>
             <p class="hover:underline" id="newarrivalbutton" >New Arrival</p>
             <p class="hover:underline" id="mostwantedbutton">Most Wanted</p>
             <p class="hover:underline"><a href="Collections.html">Collections</a></p>
             <p class="hover:underline"> <a href="Contactform.html">Contact us</a></p>
-        </div>
+           
+            </div>
+              <!-- sidebar -->
+  <div id="sidebar"class="bg-gray-200  fixed  top-0 left-0 z-20 " style="width:50%;height:100vh;right:-50%;transition: all;transition-duration:1000;">
+    <div class="text-right p-10">
+      <p id="closex"class="inline cursor-pointer" >X</p>
+    </div>
+  <ul class="flex flex-col gap-10 items-center text-xl  lg:flex">
+    <li><a class=" hover:underline" href="index.html">Home</a></li>
+    <li><a class="hover:underline" id="newarrivalbutton" >New Arrival</a></li>
+    <li><a class="hover:underline" id="mostwantedbutton">Most Wanted</a></li>
+    <li><a class="hover:underline" href="Collections.html">Collections</a></li>
+    <li><a class="hover:underline" href="Contactform.html">Contact us</a></li>
+  </ul>
+</div>
     </div>
     <!-- Image section -->
 <div class="p-5 flex justify-center relative" style="width: 100%;">
@@ -147,93 +164,64 @@
    </div>
 </div>
 
-   <!-- New Arrivals Section -->
+  
 
+ <!-- New Arrivals section -->
 <div class="flex justify-center" id="newarrivalcontainer">
-    <div style="position: relative; margin-top:30px;">
-        <h1  class="font-extrabold text-4xl">New Arrivals</h1>
-        <div   class="flex gap-8 p-5">
-            <div style="background-color: white; border-radius: 5px; position: relative;">
-                <img src="./img/f1.jpg" alt="" style="width: 300px; height: 300px; opacity: 0.6; z-index: 2;">
-                <button style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); border-radius: 10px; background-color: whitesmoke;" class="border border-solid border-black p-2">ShopNow &#x2192;</button>
+    <div class="px-4 lg:px-0"> <!-- Added padding for mobile and removed padding for large screens -->
+        <h1 class="font-extrabold text-4xl mb-6 lg:text-center">New Arrivals</h1> <!-- Centered text for large screens -->
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"> <!-- Changed flex to grid and adjusted column layout for different screen sizes -->
+            <div class="bg-white rounded-lg shadow-lg relative">
+                <img src="./img/f1.jpg" alt="" class="w-full h-auto rounded-lg opacity-60">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-whitesmoke rounded-lg px-4 py-2 border border-solid border-black">Shop Now &#x2192;</button>
             </div>
-            <div style="background-color: white; border-radius: 5px; position: relative;">
-                <img src="./img/f7.jpg" alt="" style="width: 300px; height: 300px; opacity: 0.6; z-index: 2;">
-                <button style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); border-radius: 10px; background-color: whitesmoke;" class="border border-solid border-black p-2">ShopNow &#x2192;</button>
+            <div class="bg-white rounded-lg shadow-lg relative">
+                <img src="./img/f7.jpg" alt="" class="w-full h-auto rounded-lg opacity-60">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-whitesmoke rounded-lg px-4 py-2 border border-solid border-black">Shop Now &#x2192;</button>
             </div>
-            <div style="background-color: white; border-radius: 5px; position: relative;">
-                <img src="./img/n1.jpg" alt="" style="width: 300px; height: 300px; opacity: 0.6; z-index: 2;">
-                <button style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); border-radius: 10px; background-color: whitesmoke;" class="border border-solid border-black p-2">ShopNow &#x2192;</button>
+            <div class="bg-white rounded-lg shadow-lg relative">
+                <img src="./img/n1.jpg" alt="" class="w-full h-auto rounded-lg opacity-60">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-whitesmoke rounded-lg px-4 py-2 border border-solid border-black">Shop Now &#x2192;</button>
             </div>
-            <div style="background-color: white; border-radius: 5px; position: relative;">
-                <img src="./img/n7.jpg" alt="" style="width: 300px; height: 300px; opacity: 0.6; z-index: 2;">
-                <button style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); border-radius: 10px; background-color: whitesmoke;" class="border border-solid border-black p-2">ShopNow &#x2192;</button>
+            <div class="bg-white rounded-lg shadow-lg relative">
+                <img src="./img/n7.jpg" alt="" class="w-full h-auto rounded-lg opacity-60">
+                <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-whitesmoke rounded-lg px-4 py-2 border border-solid border-black">Shop Now &#x2192;</button>
             </div>
         </div>
     </div>
 </div>
+  
+    <!-- Most Wanted section -->
+<div class="flex justify-center" id="mostwantedcontainer">
+    <div class="px-4 lg:px-0">
+        <h1 class="font-extrabold text-4xl mb-6 lg:text-center">Most Wanted</h1>
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="relative">
+                <p class="absolute bg-red-600 p-1 text-white w-16 text-center rounded-md">Sale</p> <!-- Adjusted width for smaller screens -->
+                <img src="./img/n8.jpg" alt="" class="w-64 h-64"> <!-- Adjusted image size using Tailwind classes -->
+                <img src="./img/blackheart.png" alt="" class="w-10 absolute bottom-4 right-4"> <!-- Adjusted image size using Tailwind classes -->
+            </div>
+            <div class="relative">
+                <p class="absolute bg-red-600 p-1 text-white w-16 text-center rounded-md">Sale</p>
+                <img src="./img/f1.jpg" alt="" class="w-64 h-64">
+                <img src="./img/blackheart.png" alt="" class="w-10 absolute bottom-4 right-4">
+            </div>
+            <div class="relative">
+                <p class="absolute bg-red-600 p-1 text-white w-16 text-center rounded-md">Sale</p>
+                <img src="./img/n8.jpg" alt="" class="w-64 h-64">
+                <img src="./img/blackheart.png" alt="" class="w-10 absolute bottom-4 right-4">
+            </div>
+            <div class="relative">
+                <p class="absolute bg-red-600 p-1 text-white w-16 text-center rounded-md">Sale</p>
+                <img src="./img/f1.jpg" alt="" class="w-64 h-64">
+                <img src="./img/blackheart.png" alt="" class="w-10 absolute bottom-4 right-4">
+            </div>
+           
+        </div>
+    </div>
+</div>
 
-
-   <!-- Most Wanted -->
-   <div class="flex justify-center" id="mostwantedcontainer"  >
-<div  >
-    <h1 class="font-extrabold text-4xl" >Most Wanted</h1>
-    <div class="flex gap-8 p-5 mt-3 " id="items-container" style="overflow-x:auto; "  >
     
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center; border-radius: 5px;">Sale</p>
-        <img src="./img/n8.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px; position: absolute; bottom: 10px; right: 10px;">
-    </div>
-    
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center;border-radius: 5px;">Sale</p>
-        <img src="./img/f1.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px;bottom:10px; right: 10px;" class="absolute ">
-    </div>
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center; border-radius: 5px;">Sale</p>
-        <img src="./img/n8.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px; position: absolute; bottom: 10px; right: 10px;">
-    </div>
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center; border-radius: 5px;">Sale</p>
-        <img src="./img/f1.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px; position: absolute; bottom: 10px; right: 10px;">
-    </div>
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center; border-radius: 5px;">Sale</p>
-        <img src="./img/n8.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px; position: absolute; bottom: 10px; right: 10px;">
-    </div>
-    <!-- <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center;border-radius: 5px;">Sale</p>
-        <img src="./img/n4.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px; bottom:10px; right: 10px;" class="absolute ">
-    </div>
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center; border-radius: 5px;">Sale</p>
-        <img src="./img/n8.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px; position: absolute; bottom: 10px; right: 10px;">
-    </div> -->
-    <!-- <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center;border-radius: 5px;">Sale</p>
-        <img src="./img/f7.jpg" alt="" style="width: 300px; height: 300px;" >
-        <img src="./img/blackheart.png" alt="" style="width: 40px;bottom:10px; right: 10px;" class="absolute ">
-    </div>
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center;border-radius: 5px;">Sale</p>
-        <img src="./img/f1.jpg" alt="" style="width: 300px; height: 300px;">
-        <img src="./img/blackheart.png" alt="" style="width: 40px;bottom:10px; right: 10px;" class="absolute ">
-    </div>
-    <div style="position: relative;">
-        <p class="bg-red-600 p-1 absolute text-white" style="width: 50px; text-align: center;border-radius: 5px;">Sale</p>
-        <img src="./img/f7.jpg" alt="" style="width: 300px; height: 300px;" >
-        <img src="./img/blackheart.png" alt="" style="width: 40px;bottom:10px; right: 10px;" class="absolute ">
-    </div>  -->
-</div>
-</div>
-</div>
 <!-- Offer section -->
 <div class="flex justify-center">
 <div class="flex " style="background-color: black;">

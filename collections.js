@@ -11,3 +11,15 @@ function filterImages() {
       item.style.display = isVisible ? 'block' : 'none';
     });
   }
+
+  var sidebar=document.getElementById("sidebar")
+var closex=document.getElementById("closex")
+var menuicon=document.getElementById("menuicon")
+
+menuicon.addEventListener("click",function(){
+    sidebar.style.left=0
+})
+
+closex.addEventListener("click",function(){
+    sidebar.style.left= "-50%"
+})
